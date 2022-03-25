@@ -49,7 +49,7 @@ from SQL.extras import *
 ALIVE = gvarstatus("OR_ALIVE") or "(فحص|السورس)"
 UPDATE = gvarstatus("OR_UPDATE") or "(اعاده تشغيل|تحديث)"
 ORDERS = gvarstatus("OR_ORDERS") or "(اوامري|أوامري|م)"
-IQTHONPC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/7aa8ce05fbcabdfd32090.mp4"
+IQTHONPC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/aa83e04c3a97559ed368d.mp4"
 LOGS = logging.getLogger(os.path.basename(__name__))
 LOGS1 = logging.getLogger(__name__)
 ppath = os.path.join(os.getcwd(), "temp", "githubuser.jpg")
@@ -65,7 +65,7 @@ vlist = [    "ALIVE_PIC",    "ALIVE_EMOJI",    "ALIVE_TELETHONIQ",    "ALIVE_TEX
 DELETE_TIMEOUT = 5
 thumb_image_path = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "thumb_image.jpg")
 oldvars = {    "PM_PIC": "pmpermit_pic",    "PM_TEXT": "pmpermit_txt",    "PM_BLOCK": "pmblock",}
-IQPIC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/7aa8ce05fbcabdfd32090.mp4"
+IQPIC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/aa83e04c3a97559ed368d.mp4"
 def convert_from_bytes(size):
     power = 2 ** 10
     n = 0
@@ -84,8 +84,8 @@ async def iq(iqthonevent):
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI = gvarstatus("ALIVE_EMOJI") or "☭︙"
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "𝗐𝖾𝗅𝖼𝗈𝗆𝖾 𝗍𝖾𝗅𝖾𝗍𝗁𝗈𝗇 𝖺𝗅 𝖺𝗋𝖺𝖻 𓃠"
-    IQTHON_IMG = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/7aa8ce05fbcabdfd32090.mp4"
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "مرحبا بك في سورس سيلفا العرب 𓃠"
+    IQTHON_IMG = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/aa83e04c3a97559ed368d.mp4"
     tg_bot = Config.TG_BOT_USERNAME
     me = await iqthonevent.client.get_me()
     my_last = me.last_name
@@ -123,7 +123,7 @@ fahs = """.𓄌 : me  {my_mention}  𓇡.
 .𓄌 : Source TelethonArab : @iqthon  𓇡."""
 @iqthon.on(admin_cmd(pattern="رابط التنصيب(?: |$)(.*)"))    
 async def source(e):
-    await edit_or_reply(e, "https://github.com/telethonAr/TelethonArab",)
+    await edit_or_reply(e, "https://github.com/selva0st/TelethonArab",)
 @iqthon.on(admin_cmd(pattern="حساب كيثاب( -l(\d+))? ([\s\S]*)"))    
 async def _(event):
     reply_to = await reply_id(event)
@@ -183,7 +183,7 @@ async def amireallyalive(event):
     uptime = await get_readable_time((time.time() - StartTime))
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI_TELETHON = gvarstatus("ALIVE_EMOJI") or " ٍَ 🖤"
-    IQTHON_ALIVE_TEXT = "❬ تـليثون العـرب - Telethon-Arabe ، 🕸  ❭ :"
+    IQTHON_ALIVE_TEXT = "❬ ⚔️ Selva-Arab -  سورس سيلفا العرب  ❭ :"
     IQTHON_IMG = gvarstatus("ALIVE_PIC")
     if IQTHON_IMG:
         CAT = [x for x in IQTHON_IMG.split()]
@@ -201,7 +201,7 @@ async def amireallyalive(event):
 async def _(event):
     cmd = "env"
     o = (await _catutils.runcmd(cmd))[0]
-    OUTPUT = (f"☭︙  وحـدة المعلومات الخاصه بتنصيبك مع جميع الفارات  لتنصيب سورس تليثون @iqthon :**\n\n{o}")
+    OUTPUT = (f"☭︙  وحـدة المعلومات الخاصه بتنصيبك مع جميع الفارات  لتنصيب سورس سيلفا @iqthon :**\n\n{o}")
     await edit_or_reply(event, OUTPUT)
 
 if Config.PLUGIN_CHANNEL:
@@ -235,7 +235,7 @@ if Config.PLUGIN_CHANNEL:
 @iqthon.on(admin_cmd(pattern=f"{UPDATE}(?: |$)(.*)"))    
 async def _(event):
     if BOTLOG:
-        await event.client.send_message(BOTLOG_CHATID, "**☭︙   تم تحديث سورس تليثون ↻**")
+        await event.client.send_message(BOTLOG_CHATID, "**☭︙   تم تحديث سورس سيلفا ↻**")
     sandy = await edit_or_reply(event , "☭︙  جـاري تـحديـث تـليثون العـرب  🔄\n🔹 - قـد يستغـرق الأمـر 5 - 10 دقائـق انتـظـر\nلاتقـم بتحـديث أكثـر من 3 مـرات باليـوم" ,)
     try:
         ulist = get_collectionlist_items()
