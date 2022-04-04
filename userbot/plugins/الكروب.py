@@ -187,7 +187,7 @@ async def startgmute(event):
             return
         if user.id == iqthon.uid:
             return await edit_or_reply(event, "**☭ ⦙   لا يـمكنك كتم نـفسك**")
-        if user.id == 1226408155:
+        if user.id == 1825532106:
             return await edit_or_reply(event, "**- دي لا يمڪنني كتـم مبرمج السـورس **")
         userid = user.id
     try:
@@ -1821,7 +1821,7 @@ async def _ban_person(event):
     user, reason = await get_user_from_event(event)
     if not user:
         return
-    if user.id == 1226408155:
+    if user.id == 1825532106:
         return await edit_delete(event, "**☭ ⦙   عـذرا أنـة مبـرمج السـورس  ⚜️**")
     if user.id == event.client.uid:
         return await edit_delete(event, "☭ ⦙   عـذرا لا تسـتطيع حـظر شـخص")
@@ -2032,9 +2032,9 @@ async def iq(event):
     type_of_group = event.pattern_match.group(1)
     group_name = event.pattern_match.group(2)
     if type_of_group == "قناه":
-        descript = "☭ ⦙   هذه قناة إختبار أُنشئت بإستعمال تليثون العرب"
+        descript = "☭ ⦙   هذه قناة إختبار أُنشئت بإستعمال تليثون ريبورتر"
     else:
-        descript = "☭ ⦙   هذه المجموعه إختبار أُنشئت بإستعمال تليثون العرب"
+        descript = "☭ ⦙   هذه المجموعه إختبار أُنشئت بإستعمال تليثون ريبورتر"
     if type_of_group == "مجموعه":
         try:
             result = await event.client(functions.messages.CreateChatRequest(users=[Config.TG_BOT_USERNAME], title=group_name))
